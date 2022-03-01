@@ -12,16 +12,17 @@ public class Student {
 
     @Id
     @Column(name = "id")
-    int id;
+    private int id;
 
     @Column(name = "name")
-    String name;
+    private String name;
 
     @Column(name = "surname")
-    String surname;
+    private String surname;
 
     @Column(name = "points")
-    int points;
+    private int points;
+
 
     public int getId() {
         return id;
@@ -64,5 +65,13 @@ public class Student {
         return Objects.hash(id, name, surname, points);
     }
 
-
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", points=" + points +
+                '}';
+    }
 }
