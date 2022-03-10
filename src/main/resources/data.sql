@@ -3,7 +3,7 @@ CREATE TABLE STUDENTS
     id      int generated always as identity primary key,
     name    varchar2(50) not null,
     surname varchar2(50) not null,
-    points  int          not null CHECK ( points >= 0 )
+    points DOUBLE PRECISION not null CHECK ( points >= 0 )
 );
 
 INSERT INTO STUDENTS (name, surname, points)

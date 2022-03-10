@@ -21,7 +21,7 @@ public class Student {
     private String surname;
 
     @Column(name = "points")
-    private int points;
+    private double points;
 
 
     public int getId() {
@@ -44,12 +44,16 @@ public class Student {
         this.surname = surname;
     }
 
-    public int getPoints() {
+    public double getPoints() {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(double points) {
         this.points = points;
+    }
+
+    public String getFullName() {
+        return name + " " + surname;
     }
 
     @Override
